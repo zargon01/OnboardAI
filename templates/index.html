@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment1-AI Intern</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Assignment1-AI Intern</h1>
+        <p>Extract and manage document information</p>
+      </header>
+
+      <main>
+        <section class="upload-section">
+          <h2>Upload Documents</h2>
+          <form id="upload-form" class="form-card">
+            <div class="file-input-wrapper">
+              <input
+                type="file"
+                id="file-input"
+                name="files"
+                multiple
+                accept=".pdf,.jpg,.jpeg,.png"
+              />
+              <label for="file-input" class="file-input-label">
+                <span class="upload-icon">📄</span>
+                <span>Choose Files</span>
+              </label>
+            </div>
+            <!-- Display chosen file names -->
+            <div id="file-names" class="file-names-list"></div>
+            <button type="submit" class="btn-primary">Upload Documents</button>
+          </form>
+          <div id="message" class="message-box"></div>
+        </section>
+
+        <section class="search-section">
+          <h2>Search Records</h2>
+          <form id="search-form" class="form-card">
+            <div class="input-group">
+              <input
+                type="text"
+                id="search-name"
+                placeholder="Search by Name"
+                class="form-input"
+              />
+              <input
+                type="email"
+                id="search-email"
+                placeholder="Search by Email"
+                class="form-input"
+              />
+              <button type="submit" class="btn-secondary">Search</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="records-section">
+          <h2>Extracted Records</h2>
+          <div id="records" class="records-grid"></div>
+        </section>
+      </main>
+
+      <div id="record-details" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeDetails()">&times;</span>
+          <h2>Record Details</h2>
+          <div id="details" class="details-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/script.js"></script>
+  </body>
+</html>
